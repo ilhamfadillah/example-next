@@ -7,15 +7,61 @@
   --foreground: #171717;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+} */
+
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+.font-family-karla {
+  font-family: karla;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the table */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Style the table header */
+.styled-table thead tr {
+  background-color: #333;
+  color: white;
+}
+
+/* Style table header cells */
+.styled-table th {
+  padding: 12px 15px;
+}
+
+/* Style table rows */
+.styled-table tbody tr {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row background color */
+.styled-table tbody tr:nth-of-type(even) {
+  background-color: #f2f2f2;
+}
+
+/* Hover effect for rows */
+.styled-table tbody tr:hover {
+  background-color: #ddd;
+}
+
+/* Style table data cells */
+.styled-table td {
+  padding: 12px 15px;
 }
