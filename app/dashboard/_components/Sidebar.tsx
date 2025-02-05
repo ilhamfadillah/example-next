@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Sidebar = () => {
     return (
         <aside className="bg-blue-500 h-screen text-white">
@@ -6,16 +8,11 @@ const Sidebar = () => {
             </div>
             <ul>
                 <li className="mb-2">
-                    <a href="#" className="block p-2 hover:bg-gray-700 rounded">Dashboard</a>
-                </li>
-                <li className="mb-2">
-                    <a href="#" className="block p-2 hover:bg-gray-700 rounded">Profile</a>
-                </li>
-                <li className="mb-2">
-                    <a href="#" className="block p-2 hover:bg-gray-700 rounded">Settings</a>
-                </li>
-                <li className="mb-2">
-                    <a href="#" className="block p-2 hover:bg-gray-700 rounded">Notifications</a>
+                    <Link href={{ pathname: `/dashboard/provider` }}>
+                        <span className="block p-2 hover:bg-gray-700 rounded text-bold">
+                            Provider
+                        </span>
+                    </Link>
                 </li>
             </ul>
         </aside>

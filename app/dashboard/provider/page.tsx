@@ -44,6 +44,11 @@ const ProviderPage = () => {
 
     return (
         <Layout>
+            <Link href={{ pathname: `provider/create` }}>
+                <button className="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none">
+                    CREATE
+                </button>
+            </Link>
             {error ? <p>{error}</p> : null}
             <table className="styled-table">
                 <thead>
@@ -61,7 +66,11 @@ const ProviderPage = () => {
                             <td>
                                 <Link href={{
                                     pathname: `provider/${provider.uuid}`,
-                                }}>{provider.name}</Link>
+                                }}>
+                                    <span className="hover:text-blue-500">
+                                        {provider.name}
+                                    </span>
+                                </Link>
                             </td>
                             <td>{provider.code}</td>
                             <td>{provider.address}</td>
